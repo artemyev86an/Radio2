@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RadioTest {
+
     @Test
     void radioSet() {
         Radio set = new Radio();
@@ -16,21 +17,42 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
+    void radioSetMin() {
+        Radio set = new Radio();
+        set.setRadioStation(-1);
+
+        int actual = set.getRadioStation();
+        int expected = 9;
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void radioPrev() {
         Radio prev = new Radio();
-        prev.setRadioStation(0);
-        prev.setRadioStation(prev.getRadioStation() - 1);
+
+        prev.prevRadioStation();
+        prev.prevRadioStation();
 
         int actual = prev.getRadioStation();
-        int expected = 9;
+        int expected = 8;
 
         assertEquals(expected, actual);
     }
     @Test
     void radioNext() {
         Radio next = new Radio();
-        next.setRadioStation(9);
-        next.setRadioStation(next.getRadioStation() + 1);
+
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
+        next.nextRadioStation();
 
         int actual = next.getRadioStation();
         int expected = 0;
@@ -51,6 +73,9 @@ public class RadioTest {
     @Test
     void radioVolDown() {
         Radio down = new Radio();
+        down.increaseVolume();
+
+        down.decreaseVolume();
         down.decreaseVolume();
         int actual = down.getCurrentVolume();
         int expected = 0;
