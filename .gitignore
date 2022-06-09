@@ -41,3 +41,5 @@ build/
 .DS_Store
 /src/test/java/ru/netology/sqr/
 /src/main/java/ru/netology/sqr/
+/.idea/
+/.idea/
