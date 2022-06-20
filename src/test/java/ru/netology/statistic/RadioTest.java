@@ -16,6 +16,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void radioSetMin() {
         Radio set = new Radio();
@@ -39,6 +40,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void radioNext() {
         Radio next = new Radio();
@@ -59,6 +61,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void radioVolUp() {
         Radio Up = new Radio();
@@ -70,6 +73,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void radioVolDown() {
         Radio down = new Radio();
